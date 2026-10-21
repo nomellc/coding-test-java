@@ -5,6 +5,7 @@ class Solution {
             for (String st : s1) {
                 if (st.equals(s)) {
                     answer++;
+                    break;
                 }
             }
         }
