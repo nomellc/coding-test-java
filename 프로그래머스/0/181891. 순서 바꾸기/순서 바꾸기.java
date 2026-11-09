@@ -3,14 +3,12 @@ import java.util.*;
 class Solution {
     public int[] solution(int[] num_list, int n) {
         int[] answer = new int[num_list.length];
-        int cnt = n;
-        for (int i = 0; n < answer.length; i++) {
-            answer[i] = num_list[n];
-            n++;
+        int count = 0;
+        for (int i = n; i < answer.length; i++) {
+            answer[count++] = num_list[i];
         }
-        for (int j = answer.length - cnt, k = 0; j < answer.length; j++) {
-            answer[j] = num_list[k];
-            k++;
+        for (int j = 0; j < n; j++) {
+            answer[count++] = num_list[j];
         }
         
         return answer;
